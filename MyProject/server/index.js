@@ -10,7 +10,7 @@ dotenv.config();
 app.use(express.json({extendex:true}) , express.urlencoded({extended:true}));
 app.use(cors());
 
-const mongoURI = "mongodb+srv://shourabhji:kam12345@cluster0.wajhdup.mongodb.net/MyProjects?retryWrites=true&w=majority";
+const mongoURI = "mongodb://localhost:27017/newsp?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
 mongoose.connect(mongoURI , {useUnifiedTopology: true}).then(()=>{console.log("connect to mmongodb")}).catch(err => console.log(err));
 
 
