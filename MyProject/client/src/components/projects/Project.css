@@ -1,0 +1,65 @@
+.Project{
+    width: 70vw;
+    height: 9vh;
+    margin: 1rem auto;
+    background-color: black;
+    color:white ;
+    display: flex;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 10px ;
+}
+span > i, a > i{
+    color: rgb(67, 253, 16);
+   cursor: pointer;
+   padding: 0;
+}
+span > i{
+    margin-right:1.7rem ;
+}
+.Title{
+  margin: auto 1px;
+  padding: .5rem;
+  font-weight: bolder;
+}
+.text{
+    display:inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+    width: 58vw;
+}
+.Title > span{
+    position:relative;
+
+   
+   
+}
+.detaildProject{
+    position: relative;
+    height:100% ;
+    width: 100vw;
+    border-color: black;
+}
+
+
+@media screen and ( (min-width: 0px) and (max-width :  300px)) {
+      .text{ 
+         width: 40vw;
+      }
+}
+
+@media screen and (min-width: 300px)and (max-width : 500px) {
+
+    .text{ 
+        width: 45vw;
+     }
+
+}
+
+@media screen and (min-width: 500px)and (max-width : 800px) {
+
+    .text{ 
+        width: 54vw;
+     }
+
+}

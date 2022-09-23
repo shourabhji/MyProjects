@@ -1,0 +1,36 @@
+.userBackground{
+    display: flex;
+    height: 94vh;
+    width: 100%;
+    background-color: grey;
+    background-image: url('../../img/14.jpg');
+    background-size:cover;
+}
+.userCard{
+    margin: auto;
+    margin-top: 20vh;
+    height: fit-content;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px;
+}
+.userCard > .icon{
+    color: rgb(67, 253, 16);
+    font-size: 4rem;
+}
+.name{
+    text-align: center;
+}
+
+.email{
+    padding: 1rem;
+}
+
+.userCard > .btn{
+    width: 100%;
+    margin: auto;
+
+}

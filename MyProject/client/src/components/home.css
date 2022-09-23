@@ -1,0 +1,44 @@
+.homepageContainer{
+    margin: 0;
+    width: 100vw;
+    height: 94vh;
+  display: flex;
+  
+}
+
+.homepageContainer  video {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -11;
+
+}
+
+.homepageContant{
+ 
+    margin: auto;
+    margin-top: 15vh;
+    color: white;
+    padding: 1rem;
+}
+
+
+.homepageContant  .btn{
+        margin: 2vh;
+}
+
+.homepageContant .TextHeading{
+    
+        font-weight: bolder;
+        font-size: 3rem;
+        margin: 1rem;
+  }
+
+  .homepageContant .texts{
+    padding: .5rem;
+    margin: .5rem;
+    font-style: italic;
+  }

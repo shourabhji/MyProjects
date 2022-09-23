@@ -1,0 +1,50 @@
+.ProjectHomeContainer{
+    background-image: url(../../img/13.jpg);
+    height: 100%;
+    width: 100vw;
+    background-size:cover;
+}
+
+.searchlogo{
+    color: rgb(67, 253, 16);
+    margin: 0 1.8rem;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    position: absolute;
+    top: 7vh;
+    right: 1rem;
+}
+.searchlogo > button >i{
+    padding: 1.15rem;
+    font-weight: bolder;
+  
+}
+.searchForm{
+    display: flex;
+    padding: .945rem;
+   
+}
+.searchForm i{
+    color: rgb(67, 253, 16);
+    position: relative;
+    top: 18px;
+    right: 36px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.searchForm #cancelSearch{
+  font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(67, 253, 16);
+    position: relative;
+    top: 9px;
+    right: 13px;
+    cursor: pointer;
+}
+.searchForm #cancelSearch:hover{
+    color:red;
+}

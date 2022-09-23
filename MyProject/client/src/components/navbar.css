@@ -1,0 +1,114 @@
+.navbar {
+    background-color: rgb(67, 253, 16);
+    height: 6vh;
+    z-index: 10;
+
+}
+.col {
+    color:black ;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+}
+.col:hover{
+    color:white;
+   font-size: larger;
+}
+
+.navbar ul {
+    display: flex;
+    width: 100%;
+    padding: .2rem;
+    font-style: italic;
+    font-weight:bolder;
+    
+   
+}
+
+.navbar>ul>li {
+    list-style: none;
+    margin: auto;
+
+}
+
+.navbar>ul>li>a {
+    text-decoration: none;
+    color: black;
+}
+.navbar>ul>li>a:hover{
+    color:white;
+}
+.navbar>ul>li>a:active {
+    color: black;
+ 
+}
+
+
+.toggler{
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+
+#element1 , #element2 , #element3 {
+    width: 1.5rem;
+    height: .2rem;
+    background-color: black;
+    margin: .19rem;
+    display: none;
+}
+
+
+.navIteam{
+    display: block;
+}
+
+@media screen and ( max-width:600px) {
+
+    .navIteam{
+        display: none;
+    }
+    .navbar ul {
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: .2rem;
+        font-style: italic;
+        font-weight:bolder;
+        background-color: rgb(67, 253, 16);
+        height: fit-content;
+       
+    }
+    .navbar>ul>li {
+        margin: 1rem;
+    }
+    .navbar>ul>li>a {
+        text-decoration: none;
+        color: black;
+    }
+    .navbar>ul>li>a:hover{
+        color: white;
+        font-weight: bolder;
+    }
+    .navbar>ul>li>a:active {
+        color: black;
+    } 
+    #element1 , #element2 , #element3 {
+        width: 1.5rem;
+        height: .2rem;
+        background-color: black;
+        margin: .19rem;
+        display: block;
+    }
+}
+@media screen and ( min-width:600px) {
+    #element1 , #element2 , #element3 {
+  
+      display: none !important;
+    }
+    .navIteam{
+        display: block !important;
+    }
+}

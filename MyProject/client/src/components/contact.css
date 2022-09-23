@@ -1,0 +1,84 @@
+.contactUsContainer{
+    margin: 0;
+    width: 100vw;
+    height: 94vh;
+   background-color: rgba(0, 0, 0, 0.324);
+    background-image: url('../img/contactus/contact1.jpg');
+    background-blend-mode: color-dodge;
+    background-size:cover;
+    display: flex;
+}
+.ContactForm{
+    margin: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.589);
+    height: fit-content;
+    width: 50vw;
+    padding: 1rem;
+    margin-top: 2rem;
+    display:inline-block;
+    border-radius: 1rem;
+
+}
+.contactFooter{
+    height: 10vh;
+    width: 100%;
+    display: block;
+  position: fixed;
+  bottom: 20vh;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  
+
+}
+.contacttext{
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.icon{
+
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+.icon a i {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon a{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgb(67, 253, 16);
+}
+.contactFooter a  {
+    color: rgb(64, 255, 0);
+    margin: auto;
+    cursor: pointer;
+    font-size: 3rem;
+    
+
+}
+.contactFooter a  i{
+
+
+text-shadow: 2px 2px 5px black;
+
+
+}
+.contactFooter a i:hover{
+ font-style: italic;
+}

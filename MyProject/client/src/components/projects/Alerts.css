@@ -1,0 +1,9 @@
+.alertContainer{
+    text-align:center;
+    position:absolute;
+    background-color: rgb(109, 255, 228);
+    width: 100vw;
+    height: fit-content;
+padding: .2rem;
+    display: none;
+}

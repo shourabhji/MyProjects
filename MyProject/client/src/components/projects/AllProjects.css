@@ -1,0 +1,32 @@
+.AllProjectsContainer{
+    display: flex ;
+    flex-wrap: wrap;
+    height: fit-content;
+    max-height:82.7vh ;
+    overflow: scroll;
+    width: 99%;
+
+}
+
+.noProjects{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 15vh;
+    color: white;
+}
+.spinner{
+    display: flex;
+    margin-top: 20vh;  
+}
+.spinner i{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+        font-weight: bolder;
+        font-size: 2rem;
+        color:  rgb(67, 253, 16);
+        text-shadow: 1px 1px 5px white;
+}
