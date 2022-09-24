@@ -15,9 +15,6 @@ mongoose.connect(mongoURI , {useUnifiedTopology: true}).then(()=>{console.log("c
 
 
 
-app.get('/' , (req,res) =>{
-    res.send('hello')
-})
 app.use('/api/auth' , require('./routes/auth.js'));
 app.use('/api/projects' , require('./routes/projects.js'));
  
