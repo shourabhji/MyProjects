@@ -53,7 +53,7 @@ const LoginSignup = () => {
         const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/login",
             {
                 method: 'POST',
-               
+               mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                      "Access-Control-Allow-Credentials":"true",
@@ -88,7 +88,7 @@ const LoginSignup = () => {
         const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/signup",
         {
             method: 'POST',
-           
+             mode:'no-cors',
            headers: {
                     'Content-Type': 'application/json',
                      "Access-Control-Allow-Credentials":"true",
