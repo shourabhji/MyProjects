@@ -34,11 +34,11 @@ router.post('/signup', async (req, res) => {
         }
         const authTocken = JWT.sign(data, jwt_secreat);
 
-        res.send({ message:"Registered Successfully" ,authTocken })
+      return  res.send({ message:"Registered Successfully" ,authTocken })
 
     } catch (error) {
 
-        res.send({ message: `${error}` })
+     return   res.send({ message: `${error}` })
 
     }
 
@@ -68,11 +68,11 @@ if(!passwordCompare){
         User: { id: User.id }
     }
     const authTocken = JWT.sign(data , jwt_secreat);
-    res.send({ "message":"Login Successfully",authTocken})
+    return  res.send({ "message":"Login Successfully",authTocken})
 
 
     } catch (error) {
-            res.send({"message": "some error occoured" + error})
+        return    res.send({"message": "some error occoured" + error})
     }
 });
 
@@ -90,11 +90,11 @@ router.post('/getUser' ,fetchUser, async (req,res)=>{
 
         const userID = req.User.id;
         const User = await user.findById(userID).select('-password');
-        res.send(User);
+      return  res.send(User);
 
 
     } catch (error) {
-        res.send({message:"some error occured"+error })
+      return  res.send({message:"some error occured"+error })
     }
 })
 
