@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const ProjectState = (props) => {
 
-    const host = 'https://my-projects-server.vercel.app/api/';
+    const host = 'https://myprojectserver-production.up.railway.app/api/';
     const [Projects, setProjects] = useState([]);
     const [Loader, setLoader] = useState();
     const [AlertMsg, setAlertMsg] = useState('');
@@ -22,7 +22,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/getAllProjects",
             {
                 method: 'GET',
-             mode:'no-cors',
+         
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -41,7 +41,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/createProject",
             {
                 method: 'POST',
-             mode:'no-cors',
+   
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -59,7 +59,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/deleteProject/" + id,
             {
                 method: 'DELETE',
-             mode:'no-cors',
+
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -79,7 +79,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/updateProject/" + id,
             {
                 method: 'PUT',
-             mode:'no-cors',
+    
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -102,7 +102,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/searchProject/" + text,
             {
                 method: 'GET',
-             mode:'no-cors',
+    
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
