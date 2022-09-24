@@ -8,6 +8,12 @@ const fetchUser = require('../middleware/fetchUser')
 
 
 
+router.get('/', async (req, res) => {
+
+   res.send("Hello")
+
+});
+
 // Route1  cewating new user at /api/auth/signup using post request and jwt tocke  to get token for login
 
 router.post('/signup', async (req, res) => {
