@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000 ;
 const app = express();
 dotenv.config();
 app.use(express.json({extendex:true}) , express.urlencoded({extended:true}));
-app.use(cors("*"));
+app.use(cors());
 
 
 const mongoURI = process.env.MONGO;
