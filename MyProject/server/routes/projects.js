@@ -1,9 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const router = express.Router();
 const Projects = require('../models/projects');
 const fetchUser = require('../middleware/fetchUser');
 const projects = require('../models/projects');
-
+router.options('*', cors());
 
 // Route 1 Create projects
 
