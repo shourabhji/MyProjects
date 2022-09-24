@@ -1,10 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const router = express.Router();
 const user = require('../models/user');
 const bcrypt = require('bcryptjs');
 var JWT = require('jsonwebtoken');
 var jwt_secreat = "tiasdfdg#$56@3rfsdfasasdf";
 const fetchUser = require('../middleware/fetchUser')
+
+router.options('*', cors());
 
 
 
