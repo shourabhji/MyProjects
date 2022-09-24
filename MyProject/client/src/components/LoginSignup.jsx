@@ -53,6 +53,7 @@ const LoginSignup = () => {
         const response = await fetch("https://my-projects-server.vercel.app/api/auth/login",
             {
                 method: 'POST',
+             mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -83,6 +84,7 @@ const LoginSignup = () => {
         const response = await fetch("https://my-projects-server.vercel.app/api/auth/signup",
         {
             method: 'POST',
+             mode:'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
