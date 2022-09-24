@@ -53,9 +53,10 @@ const LoginSignup = () => {
         const response = await fetch("https://my-projects-server.vercel.app/api/auth/login",
             {
                 method: 'POST',
-                Access-Control-Allow-Origin: '*' ,
+               
                 headers: {
                     'Content-Type': 'application/json',
+                     Access-Control-Allow-Origin: '*' ,
                 },
                 body: JSON.stringify(LoginCredentials)
 
@@ -84,9 +85,10 @@ const LoginSignup = () => {
         const response = await fetch("https://my-projects-server.vercel.app/api/auth/signup",
         {
             method: 'POST',
-            Access-Control-Allow-Origin: '*' ,
+           
             headers: {
                 'Content-Type': 'application/json',
+                 Access-Control-Allow-Origin: '*' ,
             },
             body: JSON.stringify(SignupCredentials)
 
