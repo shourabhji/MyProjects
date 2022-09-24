@@ -3,9 +3,8 @@ import { useState } from "react";
 
 const ProjectState = (props) => {
 
-    const host = 'http://localhost:5000/api/';
+    const host = 'https://my-projects-server.vercel.app/api/';
     const [Projects, setProjects] = useState([]);
-    const [searchText, setsearchText] = useState('');
     const [Loader, setLoader] = useState();
     const [AlertMsg, setAlertMsg] = useState('');
 
