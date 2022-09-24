@@ -25,9 +25,9 @@ router.post('/createProject', fetchUser, async (req, res) => {
         project = await new Projects({
             Title, Description, Link, User: req.User.id
         }).save()
-        res.json({ message: 'Project Created Successfully!' })
+        return res.json({ message: 'Project Created Successfully!' })
     } catch (error) {
-        res.json({ message: 'Some error occured ' + error })
+        return res.json({ message: 'Some error occured ' + error })
     }
 
 
@@ -50,10 +50,10 @@ router.get('/getAllProjects', fetchUser, async (req, res) => {
 
         const Projects = await projects.find({ User: req.User.id });
 
-        res.json(Projects);
+      return  res.json(Projects);
 
     } catch (error) {
-        res.json({ message: "some error occured " + error })
+      return  res.json({ message: "some error occured " + error })
     }
 
 
@@ -80,10 +80,10 @@ router.delete('/deleteProject/:id', fetchUser, async (req, res) => {
 
         /// Deleting contact
         await Projects.findByIdAndDelete(req.params.id);
-        res.status(200).json({ message: "Project has been deleted successfully!" });
+        return res.status(200).json({ message: "Project has been deleted successfully!" });
     }
     catch (error) {
-        res.status(401).json({message:"some error occured during deletion " + error})
+        return   res.status(401).json({message:"some error occured during deletion " + error})
     }
 
 
@@ -122,11 +122,11 @@ router.put('/updateProject/:id', fetchUser, async (req, res) => {
         // updating the project
 
         Project = await Projects.findByIdAndUpdate(req.params.id, { $set: newProject }, { new: true });
-        res.status(200).json({message:"Project Updated successfully! "});
+        return  res.status(200).json({message:"Project Updated successfully! "});
 
     }
     catch (error) {
-        res.status(401).json({message:"some error occured during Updation " + error});
+        return res.status(401).json({message:"some error occured during Updation " + error});
     }
 });
 
@@ -147,10 +147,10 @@ router.get('/searchProject/:text' , fetchUser , async (req,res)=>{
 
    const result = await Projects.find({Title:regex});
 
-   res.json(result)
+   return res.json(result)
 
 } catch (error) {
-        res.json({message:'some error occured '+error})
+      return  res.json({message:'some error occured '+error})
 }
 
 })
