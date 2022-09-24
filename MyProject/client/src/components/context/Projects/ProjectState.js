@@ -22,6 +22,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/getAllProjects",
             {
                 method: 'GET',
+             mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -40,6 +41,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/createProject",
             {
                 method: 'POST',
+             mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -57,6 +59,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/deleteProject/" + id,
             {
                 method: 'DELETE',
+             mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -76,6 +79,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/updateProject/" + id,
             {
                 method: 'PUT',
+             mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
@@ -98,6 +102,7 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/searchProject/" + text,
             {
                 method: 'GET',
+             mode:'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
