@@ -21,9 +21,10 @@ const ProjectState = (props) => {
         setLoader(true);
         const response = await fetch(host + "Projects/getAllProjects",
             {
+
                 method: 'GET',
-         
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 }
@@ -41,8 +42,8 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/createProject",
             {
                 method: 'POST',
-   
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
@@ -59,8 +60,8 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/deleteProject/" + id,
             {
                 method: 'DELETE',
-
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
@@ -79,8 +80,8 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/updateProject/" + id,
             {
                 method: 'PUT',
-    
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
@@ -102,8 +103,8 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/searchProject/" + text,
             {
                 method: 'GET',
-    
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
