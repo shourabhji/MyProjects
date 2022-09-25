@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const ProjectState = (props) => {
 
-    const host = 'https://myprojectserver-production.up.railway.app/api/';
+   const host = 'https://my-projects-server.vercel.app/api/';
     const [Projects, setProjects] = useState([]);
     const [Loader, setLoader] = useState();
     const [AlertMsg, setAlertMsg] = useState('');
