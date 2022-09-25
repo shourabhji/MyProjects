@@ -51,7 +51,7 @@ const LoginSignup = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/login",
+        const response = await fetch("https://my-projects-server.vercel.app/api/auth/login",
             {
                 method: 'POST',
                 headers: {
@@ -81,7 +81,7 @@ const LoginSignup = () => {
         if (password !== ckeckPassword) {
             return setAlertMsg('Password and Confirm password did not match');
         }
-        const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/signup",
+        const response = await fetch("https://my-projects-server.vercel.app/api/auth/signup",
         {
             method: 'POST',
             headers: {
