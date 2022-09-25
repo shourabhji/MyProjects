@@ -9,8 +9,9 @@ import Alerts from './projects/Alerts';
 
 
 
+
 const LoginSignup = () => {
-    const {setAlertMsg} = useContext(ProjectContext);
+    const {setAlertMsg } = useContext(ProjectContext);
     const nevigate = useNavigate();
     const [toggler, settoggler] = useState(true);
     const [LoginCredentials, setLoginCredentials] = useState({ email: "", password: "" });
@@ -53,23 +54,18 @@ const LoginSignup = () => {
         const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/login",
             {
                 method: 'POST',
-               mode:'no-cors',
                 headers: {
+                    'Access-Control-Allow-Origin' : '*',
                     'Content-Type': 'application/json',
-                     "Access-Control-Allow-Credentials":"true",
-                     "Access-Control-Allow-Origin"": "*" ,
-                    "Access-Control-Allow-Methods":"GET,OPTIONS,PATCH,DELETE,POST,PUT" ,
-      "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" 
                 },
                 body: JSON.stringify(LoginCredentials)
 
             })
-        const res = await response.json()
-        setAlertMsg(res.message);
-
-
-      
+   
+            const res = await response.json();
+     
         if (res.authTocken) {
+            setAlertMsg(res.message); 
             localStorage.setItem('authTocken', res.authTocken)
                 nevigate('/')
                 window.location.reload();
@@ -88,14 +84,10 @@ const LoginSignup = () => {
         const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/signup",
         {
             method: 'POST',
-             mode:'no-cors',
-           headers: {
-                    'Content-Type': 'application/json',
-                     "Access-Control-Allow-Credentials":"true",
-                     "Access-Control-Allow-Origin"": "*" ,
-                    "Access-Control-Allow-Methods":"GET,OPTIONS,PATCH,DELETE,POST,PUT" ,
-      "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" 
-                },
+            headers: {
+                'Access-Control-Allow-Origin':'*',
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify(SignupCredentials)
 
         })
