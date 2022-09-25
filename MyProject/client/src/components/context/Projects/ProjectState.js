@@ -127,4 +127,4 @@ const ProjectState = (props) => {
     )
 }
 
-export default ProjectState;
+export default ProjectState
