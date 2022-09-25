@@ -23,10 +23,6 @@ const ProjectState = (props) => {
             {
 
                 method: 'GET',
-<<<<<<< HEAD
-=======
-         
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
                     'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
@@ -46,10 +42,6 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/createProject",
             {
                 method: 'POST',
-<<<<<<< HEAD
-=======
-   
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
                     'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
@@ -68,10 +60,6 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/deleteProject/" + id,
             {
                 method: 'DELETE',
-<<<<<<< HEAD
-=======
-
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
                     'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
@@ -92,10 +80,6 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/updateProject/" + id,
             {
                 method: 'PUT',
-<<<<<<< HEAD
-=======
-    
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
                     'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
@@ -119,10 +103,6 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/searchProject/" + text,
             {
                 method: 'GET',
-<<<<<<< HEAD
-=======
-    
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
                     'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',

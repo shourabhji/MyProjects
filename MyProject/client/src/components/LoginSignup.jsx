@@ -54,10 +54,6 @@ const LoginSignup = () => {
         const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/login",
             {
                 method: 'POST',
-<<<<<<< HEAD
-=======
-               mode:'no-cors',
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
                     'Access-Control-Allow-Origin' : '*',
                     'Content-Type': 'application/json',
@@ -88,21 +84,10 @@ const LoginSignup = () => {
         const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/signup",
         {
             method: 'POST',
-<<<<<<< HEAD
             headers: {
                 'Access-Control-Allow-Origin':'*',
                 'Content-Type': 'application/json',
             },
-=======
-             mode:'no-cors',
-           headers: {
-                    'Content-Type': 'application/json',
-                     "Access-Control-Allow-Credentials":"true",
-                     "Access-Control-Allow-Origin"": "*" ,
-                    "Access-Control-Allow-Methods":"GET,OPTIONS,PATCH,DELETE,POST,PUT" ,
-      "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" 
-                },
->>>>>>> bc21bd244be946263b7737927a8677bc973123b5
             body: JSON.stringify(SignupCredentials)
 
         })

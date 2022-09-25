@@ -5,8 +5,12 @@ const dotenv = require("dotenv");
 const PORT = process.env.PORT || 5000 ;
 const app = express();
 dotenv.config();
-app.use(express.json({extendex:true}) , express.urlencoded({extended:true}));
-app.use(cors());
+app.use(express.json({extendex:true}));
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 
 const mongoURI = process.env.MONGO;
@@ -15,10 +19,12 @@ mongoose.connect(mongoURI , {useUnifiedTopology: true}).then(()=>{console.log("c
 
 
 
+app.get('/' , (req,res) =>{
+    res.send('hello')
+})
 app.use('/api/auth' , require('./routes/auth.js'));
 app.use('/api/projects' , require('./routes/projects.js'));
  
 app.listen(PORT , ()=> {
     console.log(`your app is running on http://localhost:${PORT}`)
 });
-
