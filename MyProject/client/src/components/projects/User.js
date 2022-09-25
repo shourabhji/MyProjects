@@ -14,7 +14,7 @@ const User = () => {
     const [user, setuser] = useState('');
     const getUserinfo = async () => {
 
-        const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/getUser",
+        const response = await fetch("https://my-projects-server.vercel.app/api/auth/getUser",
             {
                 method: 'POST',
                 headers: {
