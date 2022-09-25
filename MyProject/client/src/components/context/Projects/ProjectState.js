@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const ProjectState = (props) => {
 
-    const host = 'https://my-projects-server.vercel.app/api/';
+    const host = 'https://myprojectserver-production.up.railway.app/api/';
     const [Projects, setProjects] = useState([]);
     const [Loader, setLoader] = useState();
     const [AlertMsg, setAlertMsg] = useState('');
@@ -21,9 +21,14 @@ const ProjectState = (props) => {
         setLoader(true);
         const response = await fetch(host + "Projects/getAllProjects",
             {
+
                 method: 'GET',
-             mode:'no-cors',
+<<<<<<< HEAD
+=======
+         
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 }
@@ -41,8 +46,12 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/createProject",
             {
                 method: 'POST',
-             mode:'no-cors',
+<<<<<<< HEAD
+=======
+   
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
@@ -59,8 +68,12 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/deleteProject/" + id,
             {
                 method: 'DELETE',
-             mode:'no-cors',
+<<<<<<< HEAD
+=======
+
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
@@ -79,8 +92,12 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/updateProject/" + id,
             {
                 method: 'PUT',
-             mode:'no-cors',
+<<<<<<< HEAD
+=======
+    
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },
@@ -102,8 +119,12 @@ const ProjectState = (props) => {
         const response = await fetch(host + "Projects/searchProject/" + text,
             {
                 method: 'GET',
-             mode:'no-cors',
+<<<<<<< HEAD
+=======
+    
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
+                    'Access-Control-Allow-Origin':'*',
                     'Content-Type': 'application/json',
                     'authToken': localStorage.getItem('authTocken')
                 },

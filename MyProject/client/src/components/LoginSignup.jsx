@@ -9,8 +9,9 @@ import Alerts from './projects/Alerts';
 
 
 
+
 const LoginSignup = () => {
-    const {setAlertMsg} = useContext(ProjectContext);
+    const {setAlertMsg } = useContext(ProjectContext);
     const nevigate = useNavigate();
     const [toggler, settoggler] = useState(true);
     const [LoginCredentials, setLoginCredentials] = useState({ email: "", password: "" });
@@ -50,26 +51,25 @@ const LoginSignup = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("https://my-projects-server.vercel.app/api/auth/login",
+        const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/login",
             {
                 method: 'POST',
-               
+<<<<<<< HEAD
+=======
+               mode:'no-cors',
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
                 headers: {
+                    'Access-Control-Allow-Origin' : '*',
                     'Content-Type': 'application/json',
-                     "Access-Control-Allow-Credentials":"true",
-                     "Access-Control-Allow-Origin"": "*" ,
-                    "Access-Control-Allow-Methods":"GET,OPTIONS,PATCH,DELETE,POST,PUT" ,
-      "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" 
                 },
                 body: JSON.stringify(LoginCredentials)
 
             })
-        const res = await response.json()
-        setAlertMsg(res.message);
-
-
-      
+   
+            const res = await response.json();
+     
         if (res.authTocken) {
+            setAlertMsg(res.message); 
             localStorage.setItem('authTocken', res.authTocken)
                 nevigate('/')
                 window.location.reload();
@@ -85,10 +85,16 @@ const LoginSignup = () => {
         if (password !== ckeckPassword) {
             return setAlertMsg('Password and Confirm password did not match');
         }
-        const response = await fetch("https://my-projects-server.vercel.app/api/auth/signup",
+        const response = await fetch("https://myprojectserver-production.up.railway.app/api/auth/signup",
         {
             method: 'POST',
-           
+<<<<<<< HEAD
+            headers: {
+                'Access-Control-Allow-Origin':'*',
+                'Content-Type': 'application/json',
+            },
+=======
+             mode:'no-cors',
            headers: {
                     'Content-Type': 'application/json',
                      "Access-Control-Allow-Credentials":"true",
@@ -96,6 +102,7 @@ const LoginSignup = () => {
                     "Access-Control-Allow-Methods":"GET,OPTIONS,PATCH,DELETE,POST,PUT" ,
       "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" 
                 },
+>>>>>>> bc21bd244be946263b7737927a8677bc973123b5
             body: JSON.stringify(SignupCredentials)
 
         })
