@@ -19,7 +19,6 @@
 .NewProjectform {
     z-index: 10;
     max-height: 80vh;
-overflow: scroll;
     height: fit-content;
     border-radius: 1rem;
     box-shadow: 1px 1px 5px;
@@ -28,6 +27,7 @@ overflow: scroll;
     background-color: black;
     margin-top: 10vh;
     color: white;
+overflow: scroll;
 
 }
 .NewProjectform > form > .element > textarea{
@@ -53,6 +53,7 @@ overflow: scroll;
     z-index: 10;
     width: 100%;
     position: absolute;
+Height: 94vh;
     top: 6vh;
     display: none;
     backdrop-filter: blur(5px);
