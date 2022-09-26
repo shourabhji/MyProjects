@@ -18,7 +18,8 @@
 
 .NewProjectform {
     z-index: 10;
-    max-height: 70vh;
+    max-height: 80vh;
+overflow: scroll;
     height: fit-content;
     border-radius: 1rem;
     box-shadow: 1px 1px 5px;
@@ -50,7 +51,6 @@
 .backgroundBlur {
     display: flex;
     z-index: 10;
-    height: 94vh;
     width: 100%;
     position: absolute;
     top: 6vh;
