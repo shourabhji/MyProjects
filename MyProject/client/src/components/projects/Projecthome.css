@@ -2,6 +2,7 @@
     background-image: url(../../img/13.jpg);
     height: 100%;
     width: 100vw;
+overflow: scroll;
     background-size:cover;
 }
 
