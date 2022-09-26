@@ -3,6 +3,7 @@
 margin: 0;
 width: 100vw;
 height: 94vh;
+overflow: scroll;
 background-image: url('../img/christian-wiediger-WkfDrhxDMC8-unsplash.jpg');
 background-size:cover;
 display: flex;
