@@ -1,6 +1,7 @@
 .homepageContainer{
     margin: 0;
     width: 100vw;
+overflow: scroll;
     height: 94vh;
   display: flex;
   
