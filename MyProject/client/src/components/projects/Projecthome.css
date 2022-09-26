@@ -1,6 +1,7 @@
 .ProjectHomeContainer{
     background-image: url(../../img/13.jpg);
     width: 100vw;
+height: 100%;
 overflow: scroll;
     background-size:cover;
 }
