@@ -146,7 +146,7 @@ router.get('/searchProject/:text' , fetchUser , async (req,res)=>{
         
     var regex = new RegExp(req.params.text,'i');
 
-   const result = await Projects.find({Title:regex,user: req.user.id});
+   const result = await Projects.find({Title:regex,User: req.User.id});
 
    return res.json(result)
 
